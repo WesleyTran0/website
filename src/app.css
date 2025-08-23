@@ -163,6 +163,6 @@
 
 @layer components {
 	.hyperlink {
-		@apply underline underline-offset-8 decoration-2 hover:bg-chart-5 transition-colors;
+		@apply underline underline-offset-6 decoration-2 hover:bg-chart-5 transition-colors;
 	}
 }

@@ -12,7 +12,9 @@
 </script>
 
 <div class="space-y-6">
-	<h1 class="flex justify-center">PNGme</h1>
+	<h1 class="flex justify-center">
+		<a href="https://github.com/WesleyTran0/pngme?tab=readme-ov-file" class="hyperlink">PNGme</a>
+	</h1>
 
 	<h2>Overview</h2>
 	<p class="">
@@ -28,13 +30,15 @@
 
 	<h2>Goals</h2>
 
-	<p>Coming into this project, I had one goal: to "learn," Rust. And so my goals looked as such:</p>
+	<p>
+		Coming into this project, I had major want: to "learn," Rust. And so my goals looked as such:
+	</p>
 	<ul>
 		<li>
 			Familiarize myself with Rust and learn to create programs that run just through the command
 			line
 		</li>
-		<li>Understand PNG files better (a chunk of wha.)</li>
+		<li>Understand PNG files better (images have chunks? -.-)</li>
 		<li>Keep myself coding after my semester had ended</li>
 	</ul>
 	<p>
@@ -58,8 +62,50 @@
 	</p>
 
 	<h2>How Does PNGme Work?</h2>
-	<p>
+	<p class="mb-0">
 		Keeping it as simple as I can, an image is made up of chunks. As an oversimplification, these
-		chunks are made of three things: a header, their type, and some data.
+		chunks are made of three things: a header, their type, and some data. PNGme allows users to
+		create a <a href="https://www.libpng.org/pub/png/spec/1.2/PNG-Structure.html" class="hyperlink">
+			chunk
+		</a> (as long as it is a valid chunk type) and attach a message onto that chunk.
+	</p>
+	<pre><code class="language-bash">
+		pngme encode "path/to/img.png" "valid chunk" "Your hidden message"
+		pngme decode "path/to/img.png" "chunk to decode" 
+		pngme remove "path/to/img.png" "chunk to remove"
+		pngme print "path/to/img.png"
+		pngme help</code
+		></pre>
+	<p>
+		These simple commands allow users to find, hide, and remove messages hidden within a PNG file.
+	</p>
+
+	<h2>Lessons Learned</h2>
+	<p>
+		After finishing this project, I certainly had more confidence with Rust. Performing functions
+		over Iterators, splitting work into different internal crates, and even small things like
+		writing tests or defining functions made so much more sense. But I honestly came out of this
+		with so much more than just "Rust knowledge."
+	</p>
+	<p>
+		I learned SO much more about images and how they are rendered: using chunk types to encapsulate
+		information about information and when to, finally understanding why printing an image fills the
+		screen with Wingdings, and how image stenography works. I also got a sneak peak into publishing
+		crates and creating command line tools, and with that comes input validation in Rust and the
+		strength of Rust's error handling system.
+	</p>
+	<p>
+		Truthfully, this simple project grew my fondness of Rust and how eloquently it mixes object and
+		functional programming AND provides so many features like type checking, error handling, even
+		built-in testing systems that are all SO clean and easy to read when done right.
+	</p>
+
+	<h2>Conclusion & Acknoledgements</h2>
+	<p>
+		Once again, big thanks for to Robert Heaton and his tutorial, my first Rust project could not
+		have been possible without you. If you want to check out the project yourself, it is hyperlinked
+		on the title or you can click
+		<a href="https://github.com/WesleyTran0/pngme?tab=readme-ov-file" class="hyperlink">here </a> to
+		be check it out.
 	</p>
 </div>
